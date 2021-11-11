@@ -1,0 +1,16 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="TestSpark:war">
+    <output-path>$PROJECT_DIR$/TestSpark/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <exploded>false</exploded>
+        <module>TestSpark</module>
+        <packaging>war</packaging>
+        <unpackNestedArchives>false</unpackNestedArchives>
+      </options>
+    </properties>
+    <root id="archive" name="${project.artifactId}-${project.version}.war">
+      <element id="artifact" artifact-name="TestSpark:war exploded" />
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html style="height: 100%">
+<head>
+    <meta charset="utf-8">
+    <title>各时段用户量统计分析（2021/01/12）</title>
+</head>
+
+<body style="height: 100%; margin: 0">
+
+<div id="container" style="height: 90%"></div>
+
+<script src="js/echarts.min.js"></script>
+<script src="js/jquery-3.5.1.js"></script>
+
+<script type="text/javascript">
+    var dom = document.getElementById("container");
+    var myChart = echarts.init(dom);
+    var app = {};
+    option = null;
+
+
+
+    var text; // 一个变量
+    $.ajax({
+        type: 'get',  // 请求类型
+        url: './json/userCount.json', // 文件相对地址（相对于使用这个js脚本的html文件）
+        dataType: 'json', // 类型
+        async: false,
+        success: function(data) {
+            text = data; // data就是json文件中的数据，可以直接赋给text，类型为js对象，也就是直接从json数据转换成了js对象
+        },
+        error: function() {
+            alert('请求失败');
+        }
+    })
+    this.text = text; // 使用json数据，this.songs 是一个js对象
+
+
+    console.info(text.map(x => {return x.datatime}));
+    var datatime = text.map(x => {return x.datatime});
+    var userCount = text.map(x => {return x.userCount});
+
+    option = {
+        title: {
+            text: '各时段用户量统计分析（2021/01/10）'
+        },
+        tooltip: {
+            trigger: 'axis'
+        },
+        legend: {
+            data: ['邮件营销']
+        },
+        grid: {
+            left: '3%',
+            right: '4%',
+            bottom: '3%',
+            containLabel: true
+        },
+        toolbox: {
+            feature: {
+                saveAsImage: {}
+            }
+        },
+        xAxis: {
+            type: 'category',
+            boundaryGap: false,
+            data: datatime
+        },
+        yAxis: {
+            type: 'value'
+        },
+        dataZoom: [
+            {
+                type: 'slider',
+                start: 1,
+                end: 35
+            },
+            {
+                type: 'inside',
+                start: 1,
+                end: 35
+            }
+        ],
+        series: [
+            {
+                name: '用户量',
+                type: 'line',
+                stack: '总量',
+                data: userCount
+            }
+        ]
+    };
+    if (option && typeof option === "object") {
+        myChart.setOption(option, true);
+    }
+</script>
+</body>
+</html>

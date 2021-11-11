@@ -1,0 +1,16 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="titlenameCount:war">
+    <output-path>$PROJECT_DIR$/titlenameCount/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <exploded>false</exploded>
+        <module>titlenameCount</module>
+        <packaging>war</packaging>
+        <unpackNestedArchives>false</unpackNestedArchives>
+      </options>
+    </properties>
+    <root id="archive" name="${project.artifactId}-${project.version}.war">
+      <element id="artifact" artifact-name="titlenameCount:war exploded" />
+    </root>
+  </artifact>
+</component>

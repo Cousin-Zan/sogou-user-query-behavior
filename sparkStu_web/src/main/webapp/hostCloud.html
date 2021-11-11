@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>网站词云（2021/01/14）</title>
+    <script src='https://cdn.bootcss.com/echarts/3.7.0/echarts.simple.js'></script>
+    <script src='js/echarts-wordcloud.js'></script>
+    <meta charset="UTF-8">
+    <title>test（2021/01/13）</title>
+
+    <style>
+        html, body, #main {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+<div id='main'></div>
+<script>
+    var chart = echarts.init(document.getElementById('main'));
+
+    var option = {
+        tooltip: {},
+        series: [{
+            type: 'wordCloud',
+            gridSize: 15,
+            sizeRange: [10, 80],
+            rotationRange: [-90, 90],
+            rotationStep: 10,
+            shape: 'circle',
+            width: 1920,
+            height: 1080,
+            drawOutOfBound: false,
+            textStyle: {
+                normal: {
+                    color: function () {
+                        return 'rgb(' + [
+                            Math.round(Math.random() * 160),
+                            Math.round(Math.random() * 160),
+                            Math.round(Math.random() * 160)
+                        ].join(',') + ')';
+                    }
+                },
+                emphasis: {
+                    shadowBlur: 10,
+                    shadowColor: '#333'
+                }
+            },
+            data: [
+                {name:"v.ku6.com",value:"1009"},
+                {name:"book.danawa.com.cn",value:"1023"},
+                {name:"auction1.taobao.com",value:"1030"},
+                {name:"news.online.sh.cn",value:"1039"},
+                {name:"a.se2222.com",value:"1039"},
+                {name:"www.ieenn.com",value:"1040"},
+                {name:"www2.vwet.hk",value:"1046"},
+                {name:"www.9sky.com",value:"1053"},
+                {name:"topic.csdn.net",value:"1058"},
+                {name:"edu.sina.com.cn",value:"1059"},
+                {name:"dl.pconline.com.cn",value:"1060"},
+                {name:"tv.sohu.com",value:"1067"},
+                {name:"product.dangdang.com",value:"1071"},
+                {name:"sports.tom.com",value:"1073"},
+                {name:"auction1.paipai.com",value:"1082"},
+                {name:"detail.china.alibaba.com",value:"1084"},
+                {name:"eladies.sina.com.cn",value:"1094"},
+                {name:"bbs.ce.cn",value:"1112"},
+                {name:"www.ruilitang.com",value:"1114"},
+                {name:"edu.qq.com",value:"1117"},
+                {name:"club.autohome.com.cn",value:"1127"},
+                {name:"dzh.mop.com",value:"1134"},
+                {name:"qun.51.com",value:"1137"},
+                {name:"www.southcn.com",value:"1143"},
+                {name:"sports.163.com",value:"1148"},
+                {name:"news.baidu.com",value:"1151"},
+                {name:"www.pcpop.com",value:"1160"},
+                {name:"tl.sohu.com",value:"1168"},
+                {name:"military.club.china.com",value:"1181"},
+                {name:"www.qire.com",value:"1185"},
+                {name:"www.ce.cn",value:"1190"},
+                {name:"sports.sohu.com",value:"1208"},
+                {name:"6.cn",value:"1249"},
+                {name:"www.autohome.com.cn",value:"1255"},
+                {name:"mail.163.com",value:"1259"},
+                {name:"www.google.com",value:"1262"},
+                {name:"sports.sina.com.cn",value:"1263"},
+                {name:"www.520music.com",value:"1285"},
+                {name:"www.adjsq.com",value:"1292"},
+                {name:"www.cctv.com",value:"1295"},
+                {name:"forum.taobao.com",value:"1302"},
+                {name:"www.yue365.com",value:"1318"},
+                {name:"news.enorth.com.cn",value:"1358"},
+                {name:"bbs.cqzg.cn",value:"1386"},
+                {name:"health.sohu.com",value:"1388"},
+                {name:"8.onlyxx.com",value:"1401"},
+                {name:"car.autohome.com.cn",value:"1406"},
+                {name:"tech.sina.com.cn",value:"1426"},
+                {name:"www.chinanews.com.cn",value:"1437"},
+                {name:"www.bjcfo.com.cn",value:"1446"},
+                {name:"lady.qq.com",value:"1462"},
+                {name:"www.stsky.com",value:"1463"},
+                {name:"auto.sina.com.cn",value:"1469"},
+                {name:"gb.cri.cn",value:"1485"},
+                {name:"love.sr0793.com",value:"1486"},
+                {name:"www.ilib.cn",value:"1489"},
+                {name:"www.120ask.com",value:"1503"},
+                {name:"www.hao123.com",value:"1567"},
+                {name:"www.people.com.cn",value:"1582"},
+                {name:"detail.zol.com.cn",value:"1597"},
+                {name:"women.sohu.com",value:"1604"},
+                {name:"www.taobao.com",value:"1633"},
+                {name:"scnews.newssc.org",value:"1639"},
+                {name:"home.focus.cn",value:"1679"},
+                {name:"www.yule987.com",value:"1694"},
+                {name:"cang.baidu.com",value:"1694"},
+                {name:"www.qyule.com",value:"1714"},
+                {name:"www.cqvip.com",value:"1782"},
+                {name:"www.97sese.com",value:"1798"},
+                {name:"www.yesky.com",value:"1800"},
+                {name:"house.focus.cn",value:"1812"},
+                {name:"www.douban.com",value:"1815"},
+                {name:"www.yymp3.com",value:"1885"},
+                {name:"www.readnovel.com",value:"1933"},
+                {name:"ent.tom.com",value:"1947"},
+                {name:"www.onlinedown.net",value:"1978"},
+                {name:"so.youku.com",value:"2010"},
+                {name:"product.pcpop.com",value:"2016"},
+                {name:"mp3.baidu.com",value:"2042"},
+                {name:"www.che168.com",value:"2071"},
+                {name:"book.sina.com.cn",value:"2086"},
+                {name:"violar.blog.sohu.com",value:"2103"},
+                {name:"www.1ting.com",value:"2105"},
+                {name:"www.china.com.cn",value:"2216"},
+                {name:"finance.sina.com.cn",value:"2248"},
+                {name:"zhangxiaoyu52.blog.sohu.com",value:"2278"},
+                {name:"news.tom.com",value:"2322"},
+                {name:"v.sohu.com",value:"2375"},
+                {name:"ent.qq.com",value:"2379"},
+                {name:"www.4399.com",value:"2418"},
+                {name:"www.dream88.cn",value:"2476"},
+                {name:"pop.pcpop.com",value:"2507"},
+                {name:"www.skycn.com",value:"2740"},
+                {name:"bbs.club.sohu.com",value:"2754"},
+                {name:"bazhao.blogbus.com",value:"2768"},
+                {name:"www.360doc.com",value:"2772"},
+                {name:"www.xici.net",value:"2812"},
+                {name:"www.tianya.cn",value:"3091"},
+                {name:"bbs.cdqss.com",value:"3098"},
+                {name:"news.163.com",value:"3102"},
+                {name:"www.fs2you.com",value:"3149"},
+                {name:"ent.163.com",value:"3442"},
+                {name:"hi.baidu.com",value:"3444"},
+                {name:"news.vnet.cn",value:"3899"},
+                {name:"www.8264.com",value:"4132"},
+                {name:"bbs.tiexue.net",value:"4356"},
+                {name:"www.taihainet.com",value:"4400"},
+                {name:"www.56.com",value:"4431"},
+                {name:"www.ku6.com",value:"4607"},
+                {name:"cache.tianya.cn",value:"4714"},
+                {name:"yule.sohu.com",value:"4766"},
+                {name:"www.baidu.com",value:"6109"},
+                {name:"tv.mofile.com",value:"6521"},
+                {name:"news.qq.com",value:"6850"},
+                {name:"www12.asphost4free.com",value:"7084"},
+                {name:"news.sina.com.cn",value:"7292"},
+                {name:"www.cg58.com",value:"7395"},
+                {name:"news.sohu.com",value:"8558"},
+                {name:"tieba.baidu.com",value:"9257"},
+                {name:"blog.sina.com.cn",value:"12169"},
+                {name:"bjyouth.ynet.com",value:"12592"},
+                {name:"you.video.sina.com.cn",value:"12756"},
+                {name:"www.youku.com",value:"13446"},
+                {name:"news.xinhuanet.com",value:"13715"},
+                {name:"ent.sina.com.cn",value:"14313"},
+                {name:"v.youku.com",value:"14360"},
+                {name:"iask.sina.com.cn",value:"14804"},
+                {name:"pic.news.mop.com",value:"16641"},
+                {name:"baike.baidu.com",value:"19466"},
+                {name:"www.17tech.com",value:"24070"},
+                {name:"wenwen.soso.com",value:"24562"},
+                {name:"click.cpc.sogou.com",value:"27319"},
+                {name:"www.tudou.com",value:"28714"},
+                {name:"ks.cn.yahoo.com",value:"30679"},
+                {name:"news.21cn.com",value:"50594"},
+                {name:"zhidao.baidu.com",value:"103041}"}
+            ]
+        }]
+    };
+
+    chart.setOption(option);
+
+    window.onresize = chart.resize;
+</script>
+</body>
+</html>

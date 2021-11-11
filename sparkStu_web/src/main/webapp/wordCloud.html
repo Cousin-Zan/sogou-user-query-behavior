@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>词云（TOP50）（2021/01/13）</title>
+    <script src='https://cdn.bootcss.com/echarts/3.7.0/echarts.simple.js'></script>
+    <script src='js/echarts-wordcloud.js'></script>
+    <meta charset="UTF-8">
+    <title>test（2021/01/13）</title>
+
+    <style>
+        html, body, #main {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+<div id='main'></div>
+<script>
+    var chart = echarts.init(document.getElementById('main'));
+
+    var option = {
+        tooltip: {},
+        series: [{
+            type: 'wordCloud',
+            gridSize: 15,
+            sizeRange: [30, 100],
+            rotationRange: [-90, 90],
+            rotationStep: 10,
+            shape: 'pentagon',
+            width: 1920,
+            height: 1080,
+            drawOutOfBound: true,
+            textStyle: {
+                normal: {
+                    color: function () {
+                        return 'rgb(' + [
+                            Math.round(Math.random() * 160),
+                            Math.round(Math.random() * 160),
+                            Math.round(Math.random() * 160)
+                        ].join(',') + ')';
+                    }
+                },
+                emphasis: {
+                    shadowBlur: 10,
+                    shadowColor: '#333'
+                }
+            },
+            data: [
+                {name:"救灾物资",value:"69092"},
+                {name:"哄抢",value:"69084"},
+                {name:"汶川地震",value:"66357"},
+                {name:"原因",value:"62692"},
+                {name:"下载",value:"40314"},
+                {name:"图片",value:"33138"},
+                {name:"视频",value:"30114"},
+                {name:"什么",value:"21635"},
+                {name:"地震",value:"20863"},
+                {name:"北京",value:"19663"},
+                {name:"电影",value:"19033"},
+                {name:"免费",value:"17237"},
+                {name:"名单",value:"16805"},
+                {name:"如何",value:"16445"},
+                {name:"游戏",value:"16334"},
+                {name:"在线",value:"14395"},
+                {name:"照片",value:"13939"},
+                {name:"女",value:"13588"},
+                {name:"地图",value:"13318"},
+                {name:"封杀",value:"12856"},
+                {name:"QQ",value:"12090"},
+                {name:"现场",value:"12021"},
+                {name:"手机",value:"11771"},
+                {name:"广州",value:"11604"},
+                {name:"简历",value:"11462"},
+                {name:"价格",value:"11376"},
+                {name:"军区",value:"11246"},
+                {name:"小说",value:"10714"},
+                {name:"司令员",value:"10487"},
+                {name:"湘",value:"10233"},
+                {name:"自述",value:"10019"},
+                {name:"最新",value:"9846"},
+                {name:"公安部",value:"9482"},
+                {name:"观看",value:"9265"},
+                {name:"解放军",value:"8616"},
+                {name:"成都",value:"7865"},
+                {name:"2008",value:"7779"},
+                {name:"韩国",value:"7741"},
+                {name:"郭晶晶",value:"7739"},
+                {name:"汽车",value:"7722"},
+                {name:"扫黄",value:"7690"},
+                {name:"四川",value:"7618"},
+                {name:"警方",value:"7414"},
+                {name:"怎么办",value:"7243"},
+                {name:"英语",value:"6850"},
+                {name:"怎样",value:"6473"},
+                {name:"尼泊尔",value:"6385"},
+                {name:"百度",value:"6207"},
+                {name:"大陆",value:"6202"},
+                {name:"歌曲",value:"6191"}
+            ]
+        }]
+    };
+
+    chart.setOption(option);
+
+    window.onresize = chart.resize;
+</script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="flume-hdfs-sink" />
+        <module name="AnalyzerWords" />
+        <module name="titlenameCount" />
+        <module name="flume-spillable-memory-channel" />
+        <module name="flume-ng-configuration" />
+        <module name="flume-twitter-source" />
+        <module name="flume-avro-source" />
+        <module name="flume-ng-sdk" />
+        <module name="flume-irc-sink" />
+        <module name="flume-ng-kafka-sink" />
+        <module name="sparkStu_web" />
+        <module name="flume-ng-log4jappender" />
+        <module name="flume-shared-kafka-test" />
+        <module name="flume-ng-elasticsearch-sink" />
+        <module name="flume-kafka-source" />
+        <module name="flume-file-channel" />
+        <module name="TestSpark" />
+        <module name="flume-jms-source" />
+        <module name="flume-ng-tests" />
+        <module name="flume-ng-auth" />
+        <module name="flume-scribe-source" />
+        <module name="flume-tools" />
+        <module name="flume-ng-morphline-solr-sink" />
+        <module name="flume-ng-core" />
+        <module name="flume-ng-embedded-agent" />
+        <module name="flume-ng-node" />
+        <module name="flume-jdbc-channel" />
+        <module name="flume-ng-hbase-sink" />
+        <module name="Netanalyzer" />
+        <module name="flume-thrift-source" />
+        <module name="flume-taildir-source" />
+        <module name="flume-kafka-channel" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="AnalyzerWords" target="1.5" />
+      <module name="flume-avro-source" target="1.5" />
+      <module name="flume-file-channel" target="1.5" />
+      <module name="flume-hdfs-sink" target="1.5" />
+      <module name="flume-irc-sink" target="1.5" />
+      <module name="flume-jdbc-channel" target="1.5" />
+      <module name="flume-jms-source" target="1.5" />
+      <module name="flume-kafka-channel" target="1.5" />
+      <module name="flume-kafka-source" target="1.5" />
+      <module name="flume-ng-auth" target="1.5" />
+      <module name="flume-ng-channels" target="1.5" />
+      <module name="flume-ng-clients" target="1.5" />
+      <module name="flume-ng-configuration" target="1.5" />
+      <module name="flume-ng-core" target="1.5" />
+      <module name="flume-ng-dist" target="1.5" />
+      <module name="flume-ng-elasticsearch-sink" target="1.5" />
+      <module name="flume-ng-embedded-agent" target="1.5" />
+      <module name="flume-ng-hbase-sink" target="1.5" />
+      <module name="flume-ng-kafka-sink" target="1.5" />
+      <module name="flume-ng-legacy-sources" target="1.5" />
+      <module name="flume-ng-log4jappender" target="1.5" />
+      <module name="flume-ng-morphline-solr-sink" target="1.5" />
+      <module name="flume-ng-node" target="1.5" />
+      <module name="flume-ng-sdk" target="1.5" />
+      <module name="flume-ng-sinks" target="1.5" />
+      <module name="flume-ng-sources" target="1.5" />
+      <module name="flume-ng-tests" target="1.5" />
+      <module name="flume-parent" target="1.5" />
+      <module name="flume-scribe-source" target="1.5" />
+      <module name="flume-shared" target="1.5" />
+      <module name="flume-shared-kafka-test" target="1.5" />
+      <module name="flume-spillable-memory-channel" target="1.5" />
+      <module name="flume-taildir-source" target="1.5" />
+      <module name="flume-thrift-source" target="1.5" />
+      <module name="flume-tools" target="1.5" />
+      <module name="flume-twitter-source" target="1.5" />
+      <module name="Netanalyzer" target="1.5" />
+      <module name="sparkStu_web" target="1.5" />
+      <module name="TestSpark" target="1.5" />
+      <module name="titlenameCount" target="1.5" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

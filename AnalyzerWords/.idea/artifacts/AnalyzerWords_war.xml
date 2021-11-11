@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="AnalyzerWords:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>AnalyzerWords</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="sparkStu_web-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="AnalyzerWords:war exploded" />
+    </root>
+  </artifact>
+</component>

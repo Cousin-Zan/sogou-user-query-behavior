@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="jcseg">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/jcseg" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/jcseg" />
+    </SOURCES>
+    <jarDirectory url="file://$PROJECT_DIR$/jcseg" recursive="false" />
+    <jarDirectory url="file://$PROJECT_DIR$/jcseg" recursive="false" type="SOURCES" />
+  </library>
+</component>
